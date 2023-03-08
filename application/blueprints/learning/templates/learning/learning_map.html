@@ -1,0 +1,40 @@
+{% extends '/learning/base_learning.html' %}
+
+{% block body %}
+<div class="container mb-0 justify-content-center">
+    <div class="row">
+        <div class="header p-4">
+            <div class="main-header container-fluid text-center">
+                <h1>{{ name }}</h1>
+            </div>
+        </div>
+    </div> 
+</div>
+<div class="container mt-0 justify-content-center">
+    <div class="row">
+        <div class="timeline">
+            <div class="level">
+                <ul>                   
+                    <a class="lv" href="{{ url_for('learning.quantities', level=level, theme_id=theme_id) }}"><li class="theme"><h2>Физические величины</h2></li></a>     
+                </ul>
+                <ul>                   
+                    <a class="lv" href="{{ url_for('learning.symbol_test', level=level, theme_id=theme_id) }}"><li class="theme"><h2>Учим обозначения</h2></li></a>     
+                </ul>
+                <ul>                   
+                    <a class="lv" href="{{ url_for('learning.unit_test', level=level, theme_id=theme_id) }}"><li class="theme"><h2>Учим единицы измерения</h2></li></a>     
+                </ul>
+                <ul>                   
+                    <a class="lv" href="{{ url_for('learning.formulas', level=level, theme_id=theme_id) }}"><li class="theme"><h2>Формулы</h2></li></a>     
+                </ul>
+                <ul>                   
+                    <a class="lv" href="{{ url_for('learning.formul_test', level=level, theme_id=theme_id) }}"><li class="theme"><h2>Учим формулы</h2></li></a>     
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    <a href="{{ url_for('learning.learning_start', level=level) }}"><button type="button" class="btn btn-primary question">Назад</button></a>
+</div>
+{% endblock %}
+

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Rubik+Vinyl&display=swap');
+
+html {
+    height: 100%;
+}
+
+  
+
+body {
+    min-height: 100%;
+    font-family: 'Montserrat Alternates', sans-serif;    
+
+}
+
+main {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+nav.navbar {
+    background: linear-gradient(0deg,#2c5364 0%, #203a43 40%, #0f2027  83%);
+    color: whitesmoke;
+}
+
+a.nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+    
+}
+
+ul.navbar-nav .nav-item a.nav-link {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+ul.navbar-nav .nav-item a.nav-link.active {
+    text-decoration: none;
+    color: #B0E0E6;
+}
+
+ul.navbar-nav .nav-item a.nav-link:hover {
+    color: #00FFFF;
+}
+
+
+h1 {
+    color: whitesmoke;
+    font-family: 'Rubik Vinyl', cursive;
+}
+h2 {
+    color: #2c5364;
+    letter-spacing: 0.1em;
+    margin-top: 2rem;
+    font-family: 'Rubik Vinyl', cursive;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+main div.container {
+    margin-top: 2em;
+
+}
+
+
+footer.container-fluid {
+    margin-top: 10em;
+    background: linear-gradient(0deg,#2c5364 0%, #203a43 40%, #0f2027  83%);
+    height: auto;
+    color: whitesmoke;
+}
+
+
+.main-header h1 {
+    color: #2c5364;
+}
+
+
+main {
+    min-height: 80vh;
+
+}
+
+
+.timeline {
+    border-left: #2c5364;
+    border-left-width: 5px;
+    border-left-style: solid;
+    position: relative;
+
+}
+
+.timeline ul {
+    margin: 0;
+}
+
+.timeline li {
+    padding-left: 25px;
+    list-style: none;
+}
+
+
+.level .theme:before {
+    -webkit-box-shadow: 0 0 0 5px #f7f7f7;
+    box-shadow: 0 0 0 5px #2c5364;
+    background: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 2em;
+    width: 2em;
+    position: relative;
+    display: block;
+    left: -88px;
+    box-sizing: border-box;
+    top: 65px;
+  }
+
+.header {
+    border-style: solid;
+    border-color: #2c5364;
+    border-width: 5px;
+    max-width: 100%;
+    position: relative;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+
+.timeline a {
+    text-decoration: none;
+}
+
+a.lv li:hover h2 {
+    font-weight: 900;
+}
+
+a.lv li {
+    margin: 0;
+}
+
+table.table td {
+    vertical-align: middle;
+}
+
+table.table td span.katex{
+    text-align: left;
+}
+
+div.alert {
+    margin: 10px;
+}
+
+.question {
+    margin-top: 25px;
+    height: 5em;
+    width: 15%;
+    background-color: #2c5364;
+    border-color: #2c5364;
+}
+
+button.question:hover {
+    color: #00FFFF;
+    background-color: #2c5364;
+    border-color: #2c5364;
+}
+
+div.al {
+    margin-top: 25px;
+    animation: fadeOut 2s;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}

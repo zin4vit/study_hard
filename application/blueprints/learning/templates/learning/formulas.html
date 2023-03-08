@@ -1,0 +1,38 @@
+{% extends '/learning/base_learning.html' %}
+
+{% block body %}
+<div class="container mb-0 justify-content-center">
+    <div class="row">
+        <div class="header p-4">
+            <div class="main-header container-fluid text-center">
+                <h1>Физические величины</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Название</th>
+                    <th scope="col">Формула</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for formula in formulas %}
+                <tr>
+                    <td>{{ formula.name }}</td>
+                    <td>$${{ formula.formula }}$$</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="container text-center">
+    <a href="{{ url_for('learning.theme', level=level, theme_id=theme_id) }}"><button type="button" class="btn btn-primary question">Назад</button></a>
+</div>
+
+{% endblock %}

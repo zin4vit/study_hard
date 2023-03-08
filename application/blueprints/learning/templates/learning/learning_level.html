@@ -1,0 +1,29 @@
+{% extends '/learning/base_learning.html' %}
+
+{% block body %}
+    <div class="container mb-0 justify-content-center">
+        <div class="row">
+            <div class="header p-4">
+                <div class="main-header container-fluid text-center">
+                    <h1>Портал в мир физики</h1>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="container mt-0 justify-content-center">
+        <div class="row">
+            <div class="timeline">
+                <div class="level">
+                    <ul>
+                        {% for theme in themes %}                    
+                            <a class="lv" href="{{ url_for('learning.theme', level=theme.level_id, theme_id=theme.id) }}"><li class="theme"><h2>{{ theme.name }}</h2></li></a>
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <a href="{{ url_for('main_page') }}"><button type="button" class="btn btn-primary question">Назад</button></a>
+    </div>
+{% endblock %}

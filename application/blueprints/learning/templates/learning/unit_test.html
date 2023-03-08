@@ -1,0 +1,33 @@
+{% extends '/learning/base_learning.html' %}
+
+{% block body %}
+<div class="container mb-0 justify-content-center">
+    <div class="row">
+        <div class="header p-4">
+            <div class="main-header container-fluid text-center">
+                <h1>Учим единицы измерения</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    
+    
+    <p>Выберите единицы измерения:</p>
+    <p>{{ correct.name }}</p>
+    {% for question in questions %}
+        {% if question.id == correct.id %}            
+            <button type="button" class="btn btn-primary question" onclick=correct()>$${{ question.unit }}$$</button>
+        {% else %}
+            <button type="button" class="btn btn-primary question" onclick=incorrect()>$${{ question.unit }}$$</button>
+        {% endif %}
+    {% endfor%}
+    <div class="container text-center">
+        <a href="{{ url_for('learning.theme', level=level, theme_id=theme_id) }}"><button type="button" class="btn btn-primary question">Назад</button></a>
+        <a href="{{ url_for('learning.unit_test', level=level, theme_id=theme_id) }}"><button type="button" class="btn btn-primary question">Ещё</button></a>
+    </div>
+    <div id="correct"></div>
+    <div id="incorrect"></div>
+</div>
+
+{% endblock %}

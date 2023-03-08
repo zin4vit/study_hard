@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container justify-content-center mt-4">
+    <div class="container-fluid text-center">
+        <h3 class="title">Login</h3>
+        <div class="box">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-danger">
+                {{ messages[0] }}
+                 </div>
+            {% endif %}
+            {% endwith %}
+            <form method="POST" action="/login">
+                <div class="field m-4">
+                    <div class="control">
+                        <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
+                    </div>
+                </div>
+    
+                <div class="field m-4">
+                    <div class="control">
+                        <input class="input is-large" type="password" name="password" placeholder="Your Password">
+                    </div>
+                </div>
+                <div class="field m-4">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+                </div>
+                <button class="button is-block is-info is-large is-fullwidth m-4">Login</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

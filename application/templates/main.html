@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% set active_page = "main" %}
+
+
+{% block title %}
+STUDY_HARD
+{% endblock %}
+{% block body %}
+
+<div class="container mb-0 justify-content-center">
+    <div class="row">
+        <div class="header p-4">
+            <div class="main-header container-fluid text-center">
+                <h1>Портал в мир физики</h1>
+            </div>
+        </div>
+
+    </div>
+
+    
+    
+      
+</div>
+
+<div class="container mt-0 justify-content-center">
+    <div class="row">
+        <div class="timeline">
+            <div class="level">
+                <ul>
+                {% for theme in themes %}
+                    <a class="lv" href="{{ url_for('learning.learning_start', level=theme.id) }}"><li class="theme"><h2>{{ theme.level }}</h2></li></a>
+                {% endfor %}        
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
